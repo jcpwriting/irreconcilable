@@ -280,6 +280,6 @@ span[title*="UTC"] {
 }
 
 span[title*="UTC"],
-.entry-footer span:last-child {
+.entry-footer span {
   display: none !important;
 }
