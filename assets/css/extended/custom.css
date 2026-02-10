@@ -275,3 +275,11 @@ body::before {
   display: none !important;
 }
 
+span[title*="UTC"] {
+  display: none !important;
+}
+
+span[title*="UTC"],
+.entry-footer span:last-child {
+  display: none !important;
+}
