@@ -259,5 +259,21 @@ body::before {
   margin-right: calc(-50vw + 50%);
 }
 
+/* Center logo vertically in header */
+.logo a {
+  display: flex;
+  align-items: center;
+  height: 60px; /* Adjust height as needed */
+}
+
+/* Hide entry footer (date and reading time) */
+.entry-footer {
+  display: none !important;
+}
+
+/* Hide entry content but keep the title visible */
+.post-entry .entry-content {
+  display: none !important;
+}
 
 
