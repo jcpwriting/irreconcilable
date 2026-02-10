@@ -165,6 +165,11 @@ a:hover {
   display: none !important;
 }
 
+/* Hide the entire footer section in post entries */
+.post-entry footer {
+  display: none !important;
+}
+
 /* Hide all spans containing dates/times */
 span[title*="UTC"],
 span[title*="2026"],
@@ -188,6 +193,11 @@ span[title*="2025"] {
 
 /* Hide all metadata within post entries (homepage) */
 .post-entry .entry-content {
+  display: block !important; /* Changed from none - this is your description text */
+}
+
+/* Hide the entry-header metadata specifically */
+.post-entry .entry-header .post-meta {
   display: none !important;
 }
 
