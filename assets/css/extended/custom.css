@@ -9,7 +9,7 @@ body {
   letter-spacing: 0.01em;
 }
 
-/* Headers */
+/* Headers - 25% bigger */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora', serif !important;
   font-weight: 700;
@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
   color: #2c3e50; /* Dark blue-grey for readability on light background */
 }
+
+h1 { font-size: 2.5em; } /* 25% bigger */
+h2 { font-size: 2em; }   /* 25% bigger */
+h3 { font-size: 1.75em; } /* 25% bigger */
 
 /* Solarpunk glitch effect - organic, nature-inspired */
 h1:hover, h2:hover {
@@ -48,12 +52,12 @@ h1:hover, h2:hover {
   }
 }
 
-/* Updated color palette - light theme default with better contrast */
+/* Updated color palette - matching accent to title color */
 :root {
   --primary: #2c3e50; /* Dark blue-grey for text */
   --secondary: #5a6c7d; /* Medium grey for secondary text */
-  --accent: #2563eb; /* Clear blue - more legible than green */
-  --accent-glow: rgba(37, 99, 235, 0.15);
+  --accent: #2c3e50; /* Same as title color */
+  --accent-glow: rgba(44, 62, 80, 0.15);
   --background-dark: #1a1a1a; /* Dark grey for dark mode */
   --background-light: #f5f5dc; /* Eggshell for light mode */
 }
@@ -121,12 +125,19 @@ a:hover {
   color: var(--secondary) !important;
   border: none !important;
   background: transparent !important;
+  font-size: 1.25em; /* 25% bigger */
 }
 
 #theme-toggle:hover, .theme-toggle:hover {
   color: var(--primary) !important;
   border: none !important;
   box-shadow: none !important;
+}
+
+/* Navigation buttons 25% bigger */
+.menu a,
+.lang-switch a {
+  font-size: 1.25em;
 }
 
 /* Unified post entry card styling - removed colored borders */
@@ -151,6 +162,12 @@ a:hover {
 [data-theme="dark"] .post-entry:hover {
   border-color: var(--accent);
   box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+/* Hide post content and footer - only show title and date */
+.post-entry .entry-content,
+.post-entry .entry-footer {
+  display: none !important;
 }
 
 /* Clean, readable code blocks */
@@ -192,13 +209,14 @@ body::before {
   opacity: 0.5;
 }
 
-/* Refined button styling */
+/* Refined button styling - 25% bigger */
 .button, button {
   font-family: 'Lora', serif;
   border: 2px solid var(--accent);
   background: transparent;
   color: var(--accent);
-  padding: 0.5rem 1.5rem;
+  padding: 0.625rem 1.875rem; /* 25% bigger padding */
+  font-size: 1.125em; /* 25% bigger text */
   transition: all 0.3s ease;
 }
 
@@ -221,7 +239,7 @@ body::before {
 .home-banner {
   width: 100vw;
   height: 500px;
-  background-image: url('/blogito/images/banner.jpg');
+  background-image: url('/blogito/images/bird.jpg');
   background-size: cover;
   background-position: center;
   margin-bottom: 2rem;
