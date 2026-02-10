@@ -166,11 +166,11 @@ body::before {
   transition: all 0.3s ease;
 }
 
-.button:hover, button:hover {
+/*.button:hover, button:hover {
   background: var(--accent);
   color: var(--background-dark);
   box-shadow: 0 0 20px var(--accent-glow);
-}
+}*/
 
 /* Hide all share buttons */
 .share-buttons, 
@@ -183,7 +183,7 @@ body::before {
 
 /* Banner on homepage */
 .home-banner {
-  width: 100nw;
+  width: 100vw;
   height: 500px;
   background-image: url('/blogito/images/banner.jpg');
   background-size: cover;
