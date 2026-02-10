@@ -180,6 +180,7 @@ a:hover {
   display: none !important;
 }
 
+
 /* Clean, readable code blocks */
 code {
   font-family: 'Courier New', monospace;
@@ -265,8 +266,7 @@ body::before {
   height: 60px; /* Adjust height as needed */
 }
 
-/* Hide entry footer (date and reading time) */
-.entry-footer {
+.post-meta {
   display: none !important;
 }
 
