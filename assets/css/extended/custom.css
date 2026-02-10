@@ -200,6 +200,16 @@ body::before {
   z-index: 1;
 }
 
+/* Test: Add banner to list page directly */
+.list .main {
+  background-image: url('/blogito/images/banner2.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  background-repeat: no-repeat;
+}
+
+
 
 
 
