@@ -239,7 +239,7 @@ body::before {
 .home-banner {
   width: 100vw;
   height: 500px;
-  background-image: url('/blogito/images/bird.jpg');
+  background-image: url('/blogito/images/badland.jpg');
   background-size: cover;
   background-position: center;
   margin-bottom: 2rem;
@@ -247,3 +247,4 @@ body::before {
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
 }
+
