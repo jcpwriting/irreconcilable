@@ -15,12 +15,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   position: relative;
   text-transform: none;
-  color: #2c3e50; /* Dark blue-grey for readability on light background */
+  color: #2c3e50;
 }
 
-h1 { font-size: 2.5em; } /* 25% bigger */
-h2 { font-size: 2em; }   /* 25% bigger */
-h3 { font-size: 1.75em; } /* 25% bigger */
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
 
 /* Solarpunk glitch effect - organic, nature-inspired */
 h1:hover, h2:hover {
@@ -54,12 +54,12 @@ h1:hover, h2:hover {
 
 /* Updated color palette - matching accent to title color */
 :root {
-  --primary: #2c3e50; /* Dark blue-grey for text */
-  --secondary: #5a6c7d; /* Medium grey for secondary text */
-  --accent: #2c3e50; /* Same as title color */
+  --primary: #2c3e50;
+  --secondary: #5a6c7d;
+  --accent: #2c3e50;
   --accent-glow: rgba(44, 62, 80, 0.15);
-  --background-dark: #1a1a1a; /* Dark grey for dark mode */
-  --background-light: #f5f5dc; /* Eggshell for light mode */
+  --background-dark: #1a1a1a;
+  --background-light: #f5f5dc;
 }
 
 /* Light theme as default */
@@ -69,7 +69,7 @@ body,
 article,
 .page-header,
 header {
-  background-color: #f5f5dc !important; /* Eggshell/beige */
+  background-color: #f5f5dc !important;
   color: var(--primary);
 }
 
@@ -97,8 +97,7 @@ header {
 .logo a, .main .post-title {
   position: relative;
   color: var(--primary);
-  text-shadow: none; /* Removed for better light theme readability */
-  
+  text-shadow: none;
 }
 
 [data-theme="dark"] .logo a,
@@ -126,7 +125,7 @@ a:hover {
   color: var(--secondary) !important;
   border: none !important;
   background: transparent !important;
-  font-size: 1.25em; /* 25% bigger */
+  font-size: 1.25em;
 }
 
 #theme-toggle:hover, .theme-toggle:hover {
@@ -141,29 +140,12 @@ a:hover {
   font-size: 1.25em;
 }
 
-/* Unified post entry card styling - removed colored borders */
+/* Unified post entry card styling */
 .post-entry {
   background: transparent !important;
   padding: 2rem;
   transition: all 0.3s ease;
 }
-
-.post-entry .entry-meta,
-.post-entry .post-meta,
-.post-entry .author,
-.post-entry .date,
-.post-entry .reading-time,
-.post-entry [class*="meta"],
-.post-entry [class*="author"],
-.post-entry [class*="date"] {
-  display: none !important;
-}
-
-/*.post-entry:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}*/
 
 [data-theme="dark"] .post-entry {
   border-color: rgba(255, 255, 255, 0.1);
@@ -174,6 +156,39 @@ a:hover {
   box-shadow: 0 8px 24px var(--accent-glow);
 }
 
+/* ========== METADATA HIDING - COMPREHENSIVE ========== */
+
+/* Hide all metadata footers */
+.entry-footer,
+.post-footer,
+.post-meta {
+  display: none !important;
+}
+
+/* Hide all metadata within post entries (homepage) */
+.post-entry .entry-content {
+  display: none !important;
+}
+
+/* Hide all metadata within post-single (individual posts) */
+.post-header .post-meta {
+  display: none !important;
+}
+
+/* Hide breadcrumbs */
+.breadcrumbs {
+  display: none !important;
+}
+
+/* Hide tags and categories */
+.post-tags,
+.post-categories,
+[class*="tags"],
+[class*="categories"] {
+  display: none !important;
+}
+
+/* ========== END METADATA HIDING ========== */
 
 /* Clean, readable code blocks */
 code {
@@ -182,7 +197,7 @@ code {
   padding: 2px 6px;
   border-radius: 3px;
   font-size: 0.9em;
-  color: #c7254e; /* Readable code color */
+  color: #c7254e;
 }
 
 [data-theme="dark"] code {
@@ -220,8 +235,8 @@ body::before {
   border: 2px solid var(--accent);
   background: transparent;
   color: var(--accent);
-  padding: 0.625rem 1.875rem; /* 25% bigger padding */
-  font-size: 1.125em; /* 25% bigger text */
+  padding: 0.625rem 1.875rem;
+  font-size: 1.125em;
   transition: all 0.3s ease;
 }
 
@@ -257,15 +272,5 @@ body::before {
 .logo a {
   display: flex;
   align-items: center;
-  height: 60px; /* Adjust height as needed */
-}
-
-.post-meta {
-  display: none !important;
-}
-
-/* Hide entry content but keep the title visible */
-span[title*="UTC"],
-.entry-footer span {
-  display: none !important;
+  height: 60px;
 }
