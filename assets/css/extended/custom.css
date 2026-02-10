@@ -98,10 +98,7 @@ header {
   position: relative;
   color: var(--primary);
   text-shadow: none; /* Removed for better light theme readability */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%; /* or whatever height your button/container is */
+  
 }
 
 [data-theme="dark"] .logo a,
