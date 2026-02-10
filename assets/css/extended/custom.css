@@ -174,12 +174,6 @@ a:hover {
   box-shadow: 0 8px 24px var(--accent-glow);
 }
 
-/* Hide post content and footer - only show title and date */
-.post-entry .entry-content,
-.post-entry .entry-footer {
-  display: none !important;
-}
-
 
 /* Clean, readable code blocks */
 code {
@@ -271,10 +265,6 @@ body::before {
 }
 
 /* Hide entry content but keep the title visible */
-span[title*="UTC"] {
-  display: none !important;
-}
-
 span[title*="UTC"],
 .entry-footer span {
   display: none !important;
