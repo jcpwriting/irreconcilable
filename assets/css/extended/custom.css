@@ -183,7 +183,7 @@ body::before {
 
 /* Banner on homepage */
 .home-banner {
-  width: 100%;
+  width: 100nw;
   height: 500px;
   background-image: url('/blogito/images/banner.jpg');
   background-size: cover;
@@ -193,6 +193,7 @@ body::before {
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
 }
+
 
 
 
