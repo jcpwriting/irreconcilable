@@ -4,9 +4,58 @@ title = "Blogito"
 theme = "PaperMod"
 
 [params]
-  defaultTheme = "auto"
+  # description
+  description = "The last blogging project"
+
+  # Author Info
+  author = "James Cody Phelan"  # James Cody Phelan
+
+  defaultTheme = "auto"  # Options: "light", "dark", or "auto"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  
+  # Home Page Info
+  [params.homeInfoParams]
+    Title = "Welcome to My Blog"  # Main heading on homepage
+    Content = "Hi! I'm [Your Name]. I write about [your topics]. Subscribe to stay updated!"  # Homepage intro text
+  
+  # Social Links (add your handles)
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/farmerjimbo"
+  
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/yourusername"
+  
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/yourusername"
+  
+  # You can add: email, instagram, facebook, youtube, etc.
+
+# Navigation Menu
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+  
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 20
+  
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 30
+  
+  [[menu.main]]
+    name = "Search"
+    url = "/search/"
+    weight = 40
