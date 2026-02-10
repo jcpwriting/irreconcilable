@@ -149,11 +149,11 @@ a:hover {
   transition: all 0.3s ease;
 }
 
-.post-entry:hover {
+/*.post-entry:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+}*/
 
 [data-theme="dark"] .post-entry {
   border-color: rgba(255, 255, 255, 0.1);
@@ -239,7 +239,7 @@ body::before {
 .home-banner {
   width: 100vw;
   height: 500px;
-  background-image: url('/blogito/images/badland.jpg');
+  background-image: url('/blogito/images/gannets.jpg');
   background-size: cover;
   background-position: center;
   margin-bottom: 2rem;
@@ -247,4 +247,5 @@ body::before {
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
 }
+
 
