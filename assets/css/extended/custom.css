@@ -271,7 +271,7 @@ body::before {
 }
 
 /* Hide entry content but keep the title visible */
-.post-entry .entry-content {
+article.post-entry .entry-footer {
   display: none !important;
 }
 
