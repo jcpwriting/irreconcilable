@@ -7,11 +7,11 @@ theme = "PaperMod"
   description = "a writing project about the gaps between"
   author = "James Cody Phelan"
   
-  defaultTheme = "dark"  # Dark theme works better for glitchy aesthetic
-  ShowReadingTime = true
-  ShowShareButtons = true
+  defaultTheme = "light"  # Changed to light since your CSS defaults to light
+  ShowReadingTime = false  # You hid this anyway
+  ShowShareButtons = false  # You hid this anyway
   ShowPostNavLinks = false
-  ShowBreadCrumbs = true
+  ShowBreadCrumbs = false  # You hid this anyway
   ShowCodeCopyButtons = true
 
   [params.homeInfoParams]
