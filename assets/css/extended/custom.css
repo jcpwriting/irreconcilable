@@ -144,20 +144,19 @@ a:hover {
 /* Unified post entry card styling - removed colored borders */
 .post-entry {
   background: transparent !important;
-  /*border: 1px solid #d4d4d4;  Neutral grey border 
-  border-radius: 2px;*/
   padding: 2rem;
   transition: all 0.3s ease;
-    .post-entry .entry-meta,
-    .post-entry .post-meta,
-    .post-entry .author,
-    .post-entry .date,
-    .post-entry .reading-time,
-    .post-entry [class*="meta"],
-    .post-entry [class*="author"],
-    .post-entry [class*="date"] {
-  display: none !important;
 }
+
+.post-entry .entry-meta,
+.post-entry .post-meta,
+.post-entry .author,
+.post-entry .date,
+.post-entry .reading-time,
+.post-entry [class*="meta"],
+.post-entry [class*="author"],
+.post-entry [class*="date"] {
+  display: none !important;
 }
 
 /*.post-entry:hover {
