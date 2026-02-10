@@ -1,6 +1,6 @@
 baseURL: "https://farmerjimbo.github.io/blogito/"
 languageCode: "en-us"
-title: "Blogito"
+title: "irreconcilable"
 theme: "PaperMod"
 
 params:

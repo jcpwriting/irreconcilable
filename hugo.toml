@@ -1,10 +1,10 @@
 baseURL = "https://farmerjimbo.github.io/blogito/"
 languageCode = "en-us"
-title = "Blogito"
+title = "irreconcilable"
 theme = "PaperMod"
 
 [params]
-  description = "The final blog project"
+  description = "a writing project about the gaps between"
   author = "James Cody Phelan"
   
   defaultTheme = "dark"  # Dark theme works better for glitchy aesthetic
@@ -15,8 +15,8 @@ theme = "PaperMod"
   ShowCodeCopyButtons = true
 
   [params.homeInfoParams]
-    Title = "Blogito"
-    Content = "The final blog project by James Cody Phelan"
+    Title = "irreconcilable"
+    Content = "a writing project about the gaps between"
 
 [menu]
   [[menu.main]]
