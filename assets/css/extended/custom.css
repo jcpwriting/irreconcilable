@@ -9,7 +9,7 @@ body {
   letter-spacing: 0.01em;
 }
 
-/* Headers with glitch effect */
+/* Headers */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora', serif !important;
   font-weight: 700;
@@ -17,37 +17,42 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
 }
 
-/* Subtle glitch effect on hover for headings */
+/* Solarpunk glitch effect - organic, nature-inspired */
 h1:hover, h2:hover {
-  animation: glitch 0.3s ease-in-out;
+  animation: organicGlitch 0.6s ease-in-out;
 }
 
-@keyframes glitch {
-  0% {
-    transform: translate(0);
+@keyframes organicGlitch {
+  0%, 100% {
+    transform: translate(0) skew(0deg);
+    filter: hue-rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, 1px) skew(0.5deg);
+    filter: hue-rotate(5deg);
   }
   20% {
-    transform: translate(-2px, 2px);
+    transform: translate(1px, -0.5px) skew(-0.3deg);
+    filter: hue-rotate(-3deg);
+  }
+  30% {
+    transform: translate(-0.5px, -1px) skew(0.2deg);
   }
   40% {
-    transform: translate(-2px, -2px);
+    transform: translate(0.5px, 0.5px) skew(-0.1deg);
   }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(2px, -2px);
-  }
-  100% {
-    transform: translate(0);
+  50% {
+    transform: translate(0) skew(0deg);
+    opacity: 0.95;
   }
 }
 
-/* Sophisticated color palette */
+/* Sophisticated solarpunk color palette */
 :root {
   --primary: #e8e8e8;
   --secondary: #b4b4b4;
-  --accent: #ff006e;
+  --accent: #2dd4bf; /* Sea-green (teal/turquoise) */
+  --accent-glow: rgba(45, 212, 191, 0.2);
   --background: #0a0a0a;
   --surface: #1a1a1a;
 }
@@ -57,13 +62,13 @@ body {
   color: var(--primary);
 }
 
-/* Glitch text effect on site title */
+/* Organic glitch text effect on site title */
 .logo a, .main .post-title {
   position: relative;
   color: var(--primary);
   text-shadow: 
-    2px 2px 0px rgba(255, 0, 110, 0.3),
-    -2px -2px 0px rgba(0, 255, 255, 0.3);
+    1px 1px 0px rgba(45, 212, 191, 0.2),
+    -1px -1px 0px rgba(134, 239, 172, 0.15);
 }
 
 /* Refined link styling */
@@ -76,12 +81,26 @@ a {
 
 a:hover {
   border-bottom: 1px solid var(--accent);
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* Remove accent from theme toggle */
+#theme-toggle, .theme-toggle {
+  color: var(--secondary) !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+#theme-toggle:hover, .theme-toggle:hover {
+  color: var(--primary) !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Sophisticated card styling */
 .post-entry {
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.1);
   border-radius: 2px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -90,19 +109,19 @@ a:hover {
 .post-entry:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 0, 110, 0.15);
+  box-shadow: 0 8px 24px var(--accent-glow);
 }
 
 /* Clean, readable code blocks */
 code {
   font-family: 'Courier New', monospace;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(45, 212, 191, 0.05);
   padding: 2px 6px;
   border-radius: 3px;
   font-size: 0.9em;
 }
 
-/* Subtle scanline effect for glitchy feel */
+/* Subtle organic scanline effect */
 body::before {
   content: "";
   position: fixed;
@@ -112,14 +131,14 @@ body::before {
   height: 100%;
   background: repeating-linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.1) 1px,
+    rgba(45, 212, 191, 0.01),
+    rgba(45, 212, 191, 0.01) 1px,
     transparent 1px,
-    transparent 2px
+    transparent 3px
   );
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
+  opacity: 0.5;
 }
 
 /* Refined button styling */
@@ -135,4 +154,14 @@ body::before {
 .button:hover, button:hover {
   background: var(--accent);
   color: var(--background);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Hide all share buttons */
+.share-buttons, 
+.post-share, 
+.share,
+[class*="share"],
+.social-share {
+  display: none !important;
 }
