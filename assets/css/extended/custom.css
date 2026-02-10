@@ -191,7 +191,7 @@ body::before {
   display: block;
   width: calc(100% + 4rem);
   height: 500px;
-  background-image: url('blogito/static/images/banner2.jpg'); /* Fixed: removed /static/ and added missing semicolon */
+  background-image: url('/blogito/images/banner2.jpg'); /* Fixed: removed /static/ and added missing semicolon */
   background-size: cover;
   background-position: center;
   margin: -2rem -2rem 2rem -2rem;
@@ -199,6 +199,7 @@ body::before {
   position: relative;
   z-index: 1;
 }
+
 
 
 
