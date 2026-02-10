@@ -51,10 +51,19 @@ h1:hover, h2:hover {
 :root {
   --primary: #e8e8e8;
   --secondary: #b4b4b4;
-  --accent: #2dd4bf; /* Sea-green (teal/turquoise) */
-  --accent-glow: rgba(45, 212, 191, 0.2);
-  --background: #0a0a0a;
+  --accent: #10b981; /* Greener emerald tone */
+  --accent-glow: rgba(16, 185, 129, 0.2);
+  --background: #121212; /* Consistent darker gray, not pure black */
   --surface: #1a1a1a;
+}
+
+/* Consistent background across all pages */
+body, .main, .page, .post, article {
+  background-color: var(--background) !important;
+}
+
+.list, .terms {
+  background-color: var(--background) !important;
 }
 
 body {
