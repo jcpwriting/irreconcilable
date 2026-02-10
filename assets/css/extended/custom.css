@@ -271,10 +271,6 @@ body::before {
 }
 
 /* Hide entry content but keep the title visible */
-.entry-footer {
-  display: none !important;
-}
-
 span[title*="UTC"] {
   display: none !important;
 }
