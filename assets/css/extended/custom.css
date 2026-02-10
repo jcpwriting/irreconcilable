@@ -57,17 +57,33 @@ h1:hover, h2:hover {
   --surface: #1a1a1a;
 }
 
-/* Consistent background for dark mode only */
+/* Unified background colors - dark grey in dark mode, eggshell in light mode */
 [data-theme="dark"] body,
 [data-theme="dark"] .main,
+[data-theme="dark"] .list,
+[data-theme="dark"] article,
+[data-theme="dark"] .page-header,
+[data-theme="dark"] header,
 body:not([data-theme="light"]) {
-  background-color: #121212;
+  background-color: #1a1a1a !important;
 }
 
-/* Light mode background */
 [data-theme="light"] body,
-[data-theme="light"] .main {
-  background-color: #f5f5f5;
+[data-theme="light"] .main,
+[data-theme="light"] .list,
+[data-theme="light"] article,
+[data-theme="light"] .page-header,
+[data-theme="light"] header {
+  background-color: #f5f5dc !important; /* Eggshell/beige */
+}
+
+/* Remove any conflicting surface colors */
+.post-entry {
+  background: transparent !important;
+  border: 1px solid rgba(45, 212, 191, 0.1);
+  border-radius: 2px;
+  padding: 2rem;
+  transition: all 0.3s ease;
 }
 
 /* Organic glitch text effect on site title */
@@ -174,19 +190,19 @@ body::before {
   display: none !important;
 }
 
-/* Homepage banner */
-.list .main::before {
+/* Banner as a separate element on homepage */
+.list .main {
+  position: relative;
+}
+
+.list .main > .post-entry:first-of-type::before {
   content: "";
   display: block;
-  width: 100%;
-  max-width: 100%;
+  width: calc(100% + 4rem);
   height: 500px;
-  background-image: url('/static/images/banner.jpg'); /* Update if your filename is different */
+  background-image: url('/static/images/banner.jpg')
   background-size: cover;
   background-position: center;
-  margin-bottom: 3rem;
-  border-radius: 4px;
-  box-shadow: 0 12px 48px rgba(16, 185, 129, 0.2);
-  position: relative;
-  z-index: 1; /* Make sure it's above background */
+  margin: -2rem -2rem 2rem -2rem;
+  border-radius: 4px 4px 0 0;
 }
