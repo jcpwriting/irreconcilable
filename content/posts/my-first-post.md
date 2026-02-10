@@ -11,4 +11,5 @@ draft: false
 
 
 Welcome to my new blog! This is my first post using Hugo and PaperMod.
+This is an update to test deployment!
 
