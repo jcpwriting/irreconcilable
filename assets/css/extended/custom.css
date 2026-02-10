@@ -174,3 +174,18 @@ body::before {
 .social-share {
   display: none !important;
 }
+
+/* Homepage banner */
+.list .main::before {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 500px; /* Adjust as needed */
+  background-image: url('/images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3rem;
+  border-radius: 4px;
+  box-shadow: 0 12px 48px rgba(16, 185, 129, 0.2);
+}
