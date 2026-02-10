@@ -20,16 +20,16 @@ theme = "PaperMod"
 
 [menu]
   [[menu.main]]
-    name = "Home"
+    name = "home"
     url = "/"
     weight = 10
   
   [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
+    name = "archive"
+    url = "/archive/"
     weight = 20
   
   [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "the project"
+    url = "/the-project/"
     weight = 30
