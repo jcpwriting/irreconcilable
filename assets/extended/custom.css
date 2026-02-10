@@ -1,0 +1,138 @@
+/* Import Chronicle-style serif font (using free alternative: Lora) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* Apply serif font globally */
+body {
+  font-family: 'Lora', 'Georgia', serif !important;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+/* Headers with glitch effect */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif !important;
+  font-weight: 700;
+  position: relative;
+  text-transform: none;
+}
+
+/* Subtle glitch effect on hover for headings */
+h1:hover, h2:hover {
+  animation: glitch 0.3s ease-in-out;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Sophisticated color palette */
+:root {
+  --primary: #e8e8e8;
+  --secondary: #b4b4b4;
+  --accent: #ff006e;
+  --background: #0a0a0a;
+  --surface: #1a1a1a;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--primary);
+}
+
+/* Glitch text effect on site title */
+.logo a, .main .post-title {
+  position: relative;
+  color: var(--primary);
+  text-shadow: 
+    2px 2px 0px rgba(255, 0, 110, 0.3),
+    -2px -2px 0px rgba(0, 255, 255, 0.3);
+}
+
+/* Refined link styling */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--accent);
+}
+
+/* Sophisticated card styling */
+.post-entry {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.post-entry:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 0, 110, 0.15);
+}
+
+/* Clean, readable code blocks */
+code {
+  font-family: 'Courier New', monospace;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Subtle scanline effect for glitchy feel */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+}
+
+/* Refined button styling */
+.button, button {
+  font-family: 'Lora', serif;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.button:hover, button:hover {
+  background: var(--accent);
+  color: var(--background);
+}
