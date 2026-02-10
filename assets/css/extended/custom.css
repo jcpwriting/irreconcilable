@@ -158,10 +158,31 @@ a:hover {
 
 /* ========== METADATA HIDING - COMPREHENSIVE ========== */
 
-/* Hide all metadata footers */
+/* Hide all metadata footers and their contents */
 .entry-footer,
 .post-footer,
 .post-meta {
+  display: none !important;
+}
+
+/* Hide all spans containing dates/times */
+span[title*="UTC"],
+span[title*="2026"],
+span[title*="2025"] {
+  display: none !important;
+}
+
+/* Hide reading time and author metadata explicitly */
+.entry-footer span,
+.post-meta span,
+.post-footer span {
+  display: none !important;
+}
+
+/* Hide metadata dividers (the bullet points between metadata) */
+.entry-footer *,
+.post-meta *,
+.post-footer * {
   display: none !important;
 }
 
