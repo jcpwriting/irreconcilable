@@ -98,6 +98,10 @@ header {
   position: relative;
   color: var(--primary);
   text-shadow: none; /* Removed for better light theme readability */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* or whatever height your button/container is */
 }
 
 [data-theme="dark"] .logo a,
@@ -147,6 +151,16 @@ a:hover {
   border-radius: 2px;*/
   padding: 2rem;
   transition: all 0.3s ease;
+    .post-entry .entry-meta,
+    .post-entry .post-meta,
+    .post-entry .author,
+    .post-entry .date,
+    .post-entry .reading-time,
+    .post-entry [class*="meta"],
+    .post-entry [class*="author"],
+    .post-entry [class*="date"] {
+  display: none !important;
+}
 }
 
 /*.post-entry:hover {
@@ -241,7 +255,7 @@ body::before {
   height: 500px;
   background-image: url('/irreconcilable/images/bbland.jpg');
   background-size: cover;
-  background-position: center top;
+  background-position: 50% 10%;
   margin-bottom: 2rem;
   border-radius: 0px;
   margin-left: calc(-50vw + 50%);
