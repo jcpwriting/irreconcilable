@@ -53,8 +53,8 @@ h1:hover, h2:hover {
   --secondary: #b4b4b4;
   --accent: #10b981; /* Greener emerald tone */
   --accent-glow: rgba(16, 185, 129, 0.2);
-  --background: #121212; /* Consistent darker gray, not pure black */
-  --surface: #1a1a1a;
+  --background-dark: #1a1a1a; /* Dark grey for dark mode */
+  --background-light: #f5f5dc; /* Eggshell for light mode */
 }
 
 /* Unified background colors - dark grey in dark mode, eggshell in light mode */
@@ -77,21 +77,12 @@ body:not([data-theme="light"]) {
   background-color: #f5f5dc !important; /* Eggshell/beige */
 }
 
-/* Remove any conflicting surface colors */
-.post-entry {
-  background: transparent !important;
-  border: 1px solid rgba(45, 212, 191, 0.1);
-  border-radius: 2px;
-  padding: 2rem;
-  transition: all 0.3s ease;
-}
-
 /* Organic glitch text effect on site title */
 .logo a, .main .post-title {
   position: relative;
   color: var(--primary);
   text-shadow: 
-    1px 1px 0px rgba(45, 212, 191, 0.2),
+    1px 1px 0px rgba(16, 185, 129, 0.2),
     -1px -1px 0px rgba(134, 239, 172, 0.15);
 }
 
@@ -121,10 +112,10 @@ a:hover {
   box-shadow: none !important;
 }
 
-/* Sophisticated card styling */
+/* Unified post entry card styling */
 .post-entry {
-  background: var(--surface);
-  border: 1px solid rgba(45, 212, 191, 0.1);
+  background: transparent !important;
+  border: 1px solid rgba(16, 185, 129, 0.1);
   border-radius: 2px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -139,7 +130,7 @@ a:hover {
 /* Clean, readable code blocks */
 code {
   font-family: 'Courier New', monospace;
-  background: rgba(45, 212, 191, 0.05);
+  background: rgba(16, 185, 129, 0.05);
   padding: 2px 6px;
   border-radius: 3px;
   font-size: 0.9em;
@@ -155,13 +146,13 @@ body::before {
   height: 100%;
   background: repeating-linear-gradient(
     0deg,
-    rgba(45, 212, 191, 0.01),
-    rgba(45, 212, 191, 0.01) 1px,
+    rgba(16, 185, 129, 0.01),
+    rgba(16, 185, 129, 0.01) 1px,
     transparent 1px,
     transparent 3px
   );
   pointer-events: none;
-  z-index: 9999;
+  z-index: 0;
   opacity: 0.5;
 }
 
@@ -177,7 +168,7 @@ body::before {
 
 .button:hover, button:hover {
   background: var(--accent);
-  color: var(--background);
+  color: var(--background-dark);
   box-shadow: 0 0 20px var(--accent-glow);
 }
 
@@ -190,7 +181,7 @@ body::before {
   display: none !important;
 }
 
-/* Banner as a separate element on homepage */
+/* Banner on homepage */
 .list .main {
   position: relative;
 }
@@ -200,9 +191,11 @@ body::before {
   display: block;
   width: calc(100% + 4rem);
   height: 500px;
-  background-image: url('/static/images/banner.jpg')
+  background-image: url('/images/banner.jpg'); /* Fixed: removed /static/ and added missing semicolon */
   background-size: cover;
   background-position: center;
   margin: -2rem -2rem 2rem -2rem;
   border-radius: 4px 4px 0 0;
+  position: relative;
+  z-index: 1;
 }
