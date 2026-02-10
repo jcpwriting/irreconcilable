@@ -94,10 +94,10 @@ a {
   transition: border-color 0.2s ease;
 }
 
-a:hover {
+/*a:hover {
   border-bottom: 1px solid var(--accent);
   text-shadow: 0 0 8px var(--accent-glow);
-}
+}*/
 
 /* Remove accent from theme toggle */
 #theme-toggle, .theme-toggle {
@@ -166,11 +166,11 @@ body::before {
   transition: all 0.3s ease;
 }
 
-/*.button:hover, button:hover {
+.button:hover, button:hover {
   background: var(--accent);
   color: var(--background-dark);
   box-shadow: 0 0 20px var(--accent-glow);
-}*/
+}
 
 /* Hide all share buttons */
 .share-buttons, 
