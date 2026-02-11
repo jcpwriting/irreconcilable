@@ -9,18 +9,25 @@
     <lastBuildDate>Mon, 09 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/irreconcilable/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/irreconcilable/posts/my-first-post/</link>
+      <title>i. pretending to garden</title>
+      <link>http://localhost:1313/irreconcilable/posts/i.pretending/</link>
       <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/irreconcilable/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/irreconcilable/posts/i.pretending/</guid>
       <description>&lt;p&gt;TESTING TESTING TESTING. Is this thing on?
 Blogito ergo sum&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Second</title>
-      <link>http://localhost:1313/irreconcilable/posts/second-post/</link>
+      <title>iii. The Density of Our Togetherness</title>
+      <link>http://localhost:1313/irreconcilable/posts/iii.other_story/</link>
       <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/irreconcilable/posts/second-post/</guid>
+      <guid>http://localhost:1313/irreconcilable/posts/iii.other_story/</guid>
+      <description>&lt;p&gt;GOOOOO&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Second</title>
+      <link>http://localhost:1313/irreconcilable/posts/ii.the-demiurge/</link>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/irreconcilable/posts/ii.the-demiurge/</guid>
       <description>&lt;p&gt;GOOOOO&lt;/p&gt;</description>
     </item>
   </channel>

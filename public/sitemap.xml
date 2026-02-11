@@ -5,16 +5,19 @@
     <loc>http://localhost:1313/irreconcilable/the-project/</loc>
     <lastmod>2026-02-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/irreconcilable/</loc>
+    <loc>http://localhost:1313/irreconcilable/posts/i.pretending/</loc>
     <lastmod>2026-02-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/irreconcilable/posts/my-first-post/</loc>
+    <loc>http://localhost:1313/irreconcilable/posts/iii.other_story/</loc>
+    <lastmod>2026-02-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/irreconcilable/</loc>
     <lastmod>2026-02-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/irreconcilable/posts/</loc>
     <lastmod>2026-02-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/irreconcilable/posts/second-post/</loc>
+    <loc>http://localhost:1313/irreconcilable/posts/ii.the-demiurge/</loc>
     <lastmod>2026-02-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/irreconcilable/categories/</loc>
