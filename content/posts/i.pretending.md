@@ -11,5 +11,5 @@ draft: false
 
 
 TESTING TESTING TESTING. Is this thing on?
-Blogito ergo sum
+Blogito ergo sume
 
