@@ -73,6 +73,28 @@ header {
   color: var(--primary);
 }
 
+/* Make homepage content area transparent to show background image */
+.list .main,
+.list article {
+  background-color: transparent !important;
+}
+
+/* Background for pages with bg-image class */
+.bg-image {
+  background-image: url('/irreconcilable/images/bbland.jpg') !important;
+  background-size: cover;
+  background-position: 50% 10%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Make bg-image page content transparent*/
+.bg-image .main,
+.bg-image article,
+.bg-image .post-single {
+  background-color: transparent !important;
+}
+
 /* Dark mode overrides */
 [data-theme="dark"] body,
 [data-theme="dark"] .main,
@@ -81,7 +103,20 @@ header {
 [data-theme="dark"] .page-header,
 [data-theme="dark"] header {
   background-color: #1a1a1a !important;
-  color: #e8e8e8;
+  color: #f5f5dc;
+}
+
+/* Make homepage content area transparent in dark mode too */
+[data-theme="dark"] .list .main,
+[data-theme="dark"] .list article {
+  background-color: transparent !important;
+}
+
+/* Make bg-image page transparent in dark mode */
+[data-theme="dark"].bg-image .main,
+[data-theme="dark"].bg-image article,
+[data-theme="dark"].bg-image .post-single {
+  background-color: transparent !important;
 }
 
 [data-theme="dark"] h1,
@@ -90,7 +125,48 @@ header {
 [data-theme="dark"] h4,
 [data-theme="dark"] h5,
 [data-theme="dark"] h6 {
-  color: #e8e8e8;
+  color: #f5f5dc;
+}
+
+/* Dark mode menu and navigation text */
+[data-theme="dark"] #menu a,
+[data-theme="dark"] .menu a,
+[data-theme="dark"] .lang-switch a {
+  color: #f5f5dc !important;
+}
+
+[data-theme="dark"] #menu a:hover,
+[data-theme="dark"] .menu a:hover,
+[data-theme="dark"] .lang-switch a:hover {
+  color: #ffffff !important;
+}
+
+/* Dark mode post entry titles on homepage */
+[data-theme="dark"] .post-entry .entry-header h2,
+[data-theme="dark"] .post-entry-header h2,
+[data-theme="dark"] .entry-title,
+[data-theme="dark"] .post-entry h2,
+[data-theme="dark"] .post-entry h2 a {
+  color: #f5f5dc !important;
+}
+
+/* Dark mode general text elements */
+[data-theme="dark"] p,
+[data-theme="dark"] .post-content,
+[data-theme="dark"] .post-single,
+[data-theme="dark"] .entry-content,
+[data-theme="dark"] span,
+[data-theme="dark"] div {
+  color: #f5f5dc;
+}
+
+/* Dark mode links */
+[data-theme="dark"] a:not(#theme-toggle):not(.theme-toggle) {
+  color: #f5f5dc;
+}
+
+[data-theme="dark"] a:not(#theme-toggle):not(.theme-toggle):hover {
+  color: #ffffff;
 }
 
 /* Site title styling */
@@ -102,21 +178,21 @@ header {
 
 [data-theme="dark"] .logo a,
 [data-theme="dark"] .main .post-title {
-  color: #e8e8e8;
+  color: #f5f5dc;
   text-shadow: 
     1px 1px 0px rgba(37, 99, 235, 0.2),
     -1px -1px 0px rgba(96, 165, 250, 0.15);
 }
 
 /* Refined link styling */
-a {
+a:not(#theme-toggle):not(.theme-toggle) {
   color: var(--accent);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
 
-a:hover {
+a:not(#theme-toggle):not(.theme-toggle):hover {
   border-bottom: 1px solid var(--accent);
 }
 
@@ -140,20 +216,54 @@ a:hover {
   font-size: 1.25em;
 }
 
-/* Unified post entry card styling */
+/* Unified post entry card styling - REMOVED BORDERS AND BACKGROUNDS */
 .post-entry {
   background: transparent !important;
-  padding: 2rem;
+  border: none !important;
+  padding: 0.5rem;
   transition: all 0.3s ease;
+  margin-bottom: 0.5rem; /* Tighter spacing between posts */
+}
+
+/* Ensure all child elements of post-entry are transparent */
+.post-entry .entry-header,
+.post-entry .entry-content {
+  background: transparent !important;
+}
+
+/* Post entry title styling - opacity effect */
+.post-entry .entry-header h2,
+.post-entry h2,
+.post-entry .entry-title {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.post-entry:hover .entry-header h2,
+.post-entry:hover h2,
+.post-entry:hover .entry-title {
+  opacity: 1;
+}
+
+/* Remove underline from post entry title links on hover */
+.post-entry h2 a,
+.post-entry .entry-title a {
+  border-bottom: none !important;
+}
+
+.post-entry h2 a:hover,
+.post-entry .entry-title a:hover {
+  border-bottom: none !important;
 }
 
 [data-theme="dark"] .post-entry {
-  border-color: rgba(255, 255, 255, 0.1);
+  border: none !important;
+  background: transparent !important;
 }
 
 [data-theme="dark"] .post-entry:hover {
-  border-color: var(--accent);
-  box-shadow: 0 8px 24px var(--accent-glow);
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* ========== METADATA HIDING - COMPREHENSIVE ========== */
@@ -286,17 +396,108 @@ body::before {
   display: none !important;
 }
 
-/* Banner on homepage */
+/* Banner on homepage - FULL PAGE BACKGROUND */
 .home-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/irreconcilable/images/bbland.jpg');
+  background-size: cover;
+  background-position: 50% 10%;
+  background-attachment: fixed;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+}
+
+/* Banner for individual posts - can be overridden with featured_image frontmatter */
+.post-banner {
   width: 100vw;
   height: 500px;
-  background-image: url('/irreconcilable/images/bbland.jpg');
   background-size: cover;
   background-position: 50% 10%;
   margin-bottom: 2rem;
   border-radius: 0px;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
+  margin-top: -2rem; /* Pulls banner closer to header */
+}
+
+/* If Hugo's featured_image is used, this will apply */
+.post-header .featured-image,
+.post-single .featured-image {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+  object-position: 50% 10%;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+}
+
+/* PaperMod cover image styling - match homepage banner */
+.post-single .entry-cover,
+.post-single figure.entry-cover {
+  width: 100vw !important;
+  height: 500px !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  margin-bottom: 2rem !important;
+  margin-top: -2rem !important; /* Changed from 0 to -2rem to match homepage */
+  padding: 0 !important;
+}
+
+.post-single .entry-cover img,
+.post-single figure.entry-cover img {
+  width: 100vw !important;
+  height: 500px !important;
+  object-fit: cover !important;
+  object-position: 50% 10% !important;
+  border-radius: 0 !important;
+}
+
+/* Move cover above everything in the article */
+article.post-single {
+  display: flex;
+  flex-direction: column;
+}
+
+article.post-single .entry-cover {
+  order: -10;
+}
+
+article.post-single .post-header {
+  order: 0;
+}
+
+article.post-single .post-content {
+  order: 10;
+}
+
+article.post-single .post-footer {
+  order: 20;
+}
+
+/* Title alignment control - default is left aligned */
+.post-single .post-title {
+  text-align: left;
+}
+
+/* Add these classes to your front matter to change alignment:
+   Use: class: "title-center" or class: "title-right" in front matter */
+.title-center .post-title {
+  text-align: center !important;
+}
+
+.title-right .post-title {
+  text-align: right !important;
+}
+
+.title-left .post-title {
+  text-align: left !important;
 }
 
 /* Center logo vertically in header */

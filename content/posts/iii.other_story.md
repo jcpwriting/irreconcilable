@@ -1,6 +1,6 @@
 ---
 
-title: "iii. The Density of Our Togetherness"
+title: "iii. the density of our togetherness"
 
 date: 2026-02-09
 

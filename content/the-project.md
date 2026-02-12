@@ -1,5 +1,6 @@
 ---
-title: "About"
+class: "bg-image"
+title: "the project"
 date: 2026-02-09
 draft: false
 ---
